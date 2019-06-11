@@ -31,7 +31,17 @@ github-events-spider [flags]
 
 **Required flags:** `host`, `password`, `user`
 
-## Results
+## Demo
+
+**Environment:**
+  - 1 * Spider Node
+    - Azure VM + MariaDB 10.4 latest Spider Dev branch *bb-10.4-spider-ks*
+    - 32 vCore(s), 128 GB memory
+  - 3 * Data Nodes
+    - Azure Database for MariaDB 10.2
+    - General Purpose, 32 vCore(s), 2048 GB
+
+**Results:**
 ```log
 ~/github-events-spider$ ./github-events-spider -H xxx -u xxx -p xxx -t 500 -b 3 -D
 frontend dsn=xxx:xxx@tcp(xxx:3306)/?interpolateParams=true&tls=false
