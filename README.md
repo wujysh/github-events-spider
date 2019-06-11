@@ -14,20 +14,20 @@ github-events-spider [flags]
 
 | Shortcut | Name | Type | Description | Default |
 | --- | --- | --- | --- | --- |
-|  -T | --access-token | string | GitHub API access token | |
+|  -T | --access-token         | string | GitHub API access token                           |                    |
 |  -B | --backend-name-pattern | string | pattern of backend MySQL Servers (data node) name | "spider-backend-%d |
-|  -b | --backends | int                | number of backend database nodes | 3 |
-|     | --data-dir | string             | directory to store the github events archives | "data" |
-|  -d | --database | string              | database name | "github" |
-|  -D | --drop-data |                 | drop the database and tables | |
-|  -h | --help    |                    | help for github-events-spider | |
-|  -H | --host | string                  | frontend MySQL Server (Spider node) Hostname |
-|  -p | --password | string              | MySQL Server Password |
-|  -P | --port | int                     | MySQL Server Port | 3306 |
-|     |  --ssl | string                  |  MySQL Server SSL | "false" |
-|  -t | --threads | int                  | number of threads used to insert data to database | 500 |
-|  -u | --user | string                  | MySQL Server Username | |
-|  -v | --verbose |                    | output detail information | |
+|  -b | --backends             | int    | number of backend database nodes                  | 3                  |
+|     | --data-dir             | string | directory to store the github events archives     | "data"             |
+|  -d | --database             | string | database name                                     | "github"           |
+|  -D | --drop-data            |        | drop the database and tables                      |                    |
+|  -h | --help                 |        | help for github-events-spider                     |                    |
+|  -H | --host                 | string | frontend MySQL Server (Spider node) Hostname      |                    |
+|  -p | --password             | string | MySQL Server Password                             |                    |
+|  -P | --port                 | int    | MySQL Server Port                                 | 3306               |
+|     |  --ssl                 | string | MySQL Server SSL                                  | "false"            |
+|  -t | --threads              | int    | number of threads used to insert data to database | 500                |
+|  -u | --user                 | string | MySQL Server Username                             |                    |
+|  -v | --verbose              |        | output detail information                         |                    |
 
 **Required flags:** `host`, `password`, `user`
 
@@ -35,7 +35,7 @@ github-events-spider [flags]
 
 **Environment:**
   - 1 * Spider Node
-    - Azure VM + MariaDB 10.4 latest Spider Dev branch *bb-10.4-spider-ks*
+    - Azure VM + MariaDB 10.4 latest Spider Dev branch *bb-10.4-spider-ks*@5b749e6aacbede0e5657aaf74d878b8adf2d2d7c
     - 32 vCore(s), 128 GB memory
   - 3 * Data Nodes
     - Azure Database for MariaDB 10.2
