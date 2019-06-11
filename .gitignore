@@ -1,0 +1,6 @@
+bin
+data
+logs
+workspace
+.vscode
+*.gz
